@@ -1,3 +1,51 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    color: #AAA;
+    background-color: #444;
+    font-size: 18px;
+    line-height: 1.4;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+header,
+section,
+footer {
+    padding: 2em 50px;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.Logo {
+    display: inline-block;
+    width: 3em;
+    height: 3em;
+    font-size: 2em;
+    line-height: 3em;
+    text-align: center;
+    font-weight: bold;
+    font-family: serif;
+    font-style: italic;
+    color: #444;
+    background-color: #AAA;
+}
+
+footer {
+    margin-top: auto;
+}
+
 @media print {
     *,
     *:before,
