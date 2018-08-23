@@ -9,8 +9,9 @@ html {
     color: #AAA;
     background-color: #444;
     font-size: 18px;
-    line-height: 1.4;
+    line-height: 1.5;
     font-family: 'Roboto', sans-serif;
+    text-align: center;
 }
 
 body {
@@ -19,13 +20,34 @@ body {
     flex-direction: column;
 }
 
+a {
+    color: skyblue;
+    text-decoration: none;
+}
+
 header,
 section,
 footer {
-    padding: 2em 50px;
     width: 100%;
-    max-width: 1100px;
+    padding: 2em 30px;
     margin: 0 auto;
+}
+
+section {
+    border-bottom: 1px solid #555;
+}
+
+@media all and (min-width: 760px) {
+    header,
+    section,
+    footer {
+        padding: 2em calc(50vw - 350px);
+    }
+}
+
+.Header {
+    color: black;
+    background-color: #00adff;
 }
 
 .Logo {
@@ -36,10 +58,42 @@ footer {
     line-height: 3em;
     text-align: center;
     font-weight: bold;
-    font-family: serif;
     font-style: italic;
-    color: #444;
-    background-color: #AAA;
+    color: #00adff;
+    background-color: black;
+    margin: 30px 0;
+}
+
+.Company {
+    color: black;
+    margin: 0;
+    font-size: 1.3em;
+}
+
+.Tagline {
+    color: black;
+    margin: 0;
+    font-size: 1em;
+}
+
+.Greeting {
+    font-size: 32px;
+}
+
+.Intro {
+    font-size: 23px;
+}
+
+h1 {
+    color: white;
+    font-size: 32px;
+    font-weight: normal;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
 footer {
