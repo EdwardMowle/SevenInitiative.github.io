@@ -21,8 +21,13 @@ body {
 }
 
 a {
-    color: skyblue;
+    color: #00adff;
     text-decoration: none;
+}
+
+a:hover,
+a:focus {
+    text-decoration: underline;
 }
 
 header,
