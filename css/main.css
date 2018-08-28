@@ -7,11 +7,11 @@
 html {
     height: 100%;
     color: #AAA;
-    background-color: #444;
+    /* background-color: #444; */
     font-size: 18px;
     line-height: 1.5;
     font-family: 'Roboto', sans-serif;
-    text-align: center;
+    /* text-align: center; */
 }
 
 body {
@@ -21,7 +21,7 @@ body {
 }
 
 a {
-    color: #00adff;
+    color: #99dff6;
     text-decoration: none;
 }
 
@@ -39,7 +39,7 @@ footer {
 }
 
 section {
-    border-bottom: 1px solid #555;
+    border-bottom: 1px solid #b8b4c5;
 }
 
 @media all and (min-width: 760px) {
@@ -51,8 +51,24 @@ section {
 }
 
 .Header {
-    color: black;
-    background-color: #00adff;
+    position: relative;
+    padding-bottom: 12vh;
+    overflow: hidden;
+    color: #b8b4c5;
+    background-color: #282531;
+    background-image: linear-gradient(to bottom right, #282531,  #514b63)
+}
+
+.Header:after {
+    content: '';
+    height: 500px;
+    width: 150%;
+    background: white;
+    position: absolute;
+    left: -25%;
+    bottom: -500px;
+    margin-bottom: 5vh;
+    transform: rotate(-2.5deg)
 }
 
 .Logo {
@@ -64,19 +80,19 @@ section {
     text-align: center;
     font-weight: bold;
     font-style: italic;
-    color: #00adff;
-    background-color: black;
-    margin: 30px 0;
+    color: #99dff6;
+    /* background-color: black; */
+    /* margin: 30px 0; */
 }
 
 .Company {
-    color: black;
+    color: white;
     margin: 0;
     font-size: 1.3em;
 }
 
 .Tagline {
-    color: black;
+    color: #4f8cad;
     margin: 0;
     font-size: 1em;
 }
@@ -90,7 +106,7 @@ section {
 }
 
 h1 {
-    color: white;
+    color: #514b63;
     font-size: 32px;
     font-weight: normal;
 }
