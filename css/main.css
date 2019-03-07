@@ -6,12 +6,13 @@
 
 html {
     height: 100%;
-    color: #AAA;
-    /* background-color: #444; */
+    color: #333;
+    background-color: #fff;
     font-size: 18px;
     line-height: 1.5;
     font-family: 'Roboto', sans-serif;
-    /* text-align: center; */
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 body {
@@ -21,12 +22,15 @@ body {
 }
 
 a {
-    color: #99dff6;
+    color: inherit;
+    opacity: .5;
+    font-weight: bold;
     text-decoration: none;
 }
 
 a:hover,
 a:focus {
+    opacity: .8;
     text-decoration: underline;
 }
 
@@ -34,41 +38,28 @@ header,
 section,
 footer {
     width: 100%;
-    padding: 2em 30px;
+    padding-right: 18px;
+    padding-left: 18px;
     margin: 0 auto;
 }
 
-section {
-    border-bottom: 1px solid #b8b4c5;
-}
-
 @media all and (min-width: 760px) {
+
     header,
     section,
     footer {
-        padding: 2em calc(50vw - 350px);
+        padding-right: calc(50vw - 350px);
+        padding-left: calc(50vw - 350px);
     }
 }
 
 .Header {
     position: relative;
-    padding-bottom: 12vh;
+    padding-bottom: 15vh;
     overflow: hidden;
     color: #b8b4c5;
     background-color: #282531;
-    background-image: linear-gradient(to bottom right, #282531,  #514b63)
-}
-
-.Header:after {
-    content: '';
-    height: 500px;
-    width: 150%;
-    background: white;
-    position: absolute;
-    left: -25%;
-    bottom: -500px;
-    margin-bottom: 5vh;
-    transform: rotate(-2.5deg)
+    background-image: linear-gradient(to bottom right, #282531, #514b63)
 }
 
 .Logo {
@@ -105,8 +96,90 @@ section {
     font-size: 23px;
 }
 
+.Header,
+.Section {
+    position: relative;
+    padding-top: 5vw;
+    padding-bottom: 15vw;
+}
+
+.Footer {
+    margin-top: auto;
+    position: relative;
+    padding-top: 5vw;
+    padding-bottom: 10vw;
+}
+
+.Section:before,
+.Footer:before {
+    content: '';
+    display: block;
+    height: 8vw;
+    width: 150%;
+    background: white;
+    position: absolute;
+    left: -25%;
+    top: -5vw;
+    margin-bottom: 5vw;
+    transform: rotate(-1.75deg)
+}
+
+.Section > *,
+.Footer > * {
+    position: relative;
+}
+
+@media all and (min-width: 760px) {
+
+    .Header,
+    .Section {
+        padding-top: 38px;
+        padding-bottom: 114px;
+    }
+
+    .Footer {
+        padding-top: 38px;
+        padding-bottom: 76px;
+    }
+
+    .Section:before,
+    .Footer:before {
+        left: -25%;
+        top: -38px;
+        margin-bottom: 38px;
+    }
+}
+
+.Section--tech,
+.Section--tech:before {
+    color: white;
+    background-color: #333;
+}
+
+.Section--storydock,
+.Section--storydock:before {
+    color: white;
+    background-color: #326eb9;
+}
+
+.Section--swarm,
+.Section--swarm:before {
+    color: #333;
+    background-color: #ffce00;
+}
+
+.Section--links,
+.Section--links:before {
+    color: white;
+    background-color: #514b63;
+}
+
+.Section__content {
+    position: relative;
+}
+
 h1 {
-    color: #514b63;
+    /* color: #514b63; */
     font-size: 32px;
     font-weight: normal;
 }
@@ -117,16 +190,24 @@ ul {
     list-style: none;
 }
 
-footer {
-    margin-top: auto;
+.Footer,
+.Footer:before {
+    color: white;
+    background-color: #282531;
+}
+
+.Footer__content {
+    position: relative;
 }
 
 @media print {
+
     *,
     *:before,
     *:after {
         background: transparent !important;
-        color: #000 !important; /* Black prints faster */
+        color: #000 !important;
+        /* Black prints faster */
         -webkit-box-shadow: none !important;
         box-shadow: none !important;
         text-shadow: none !important;
@@ -138,11 +219,11 @@ footer {
     }
 
     a[href]:after {
-        content: " (" attr(href) ")";
+        content: " ("attr(href) ")";
     }
 
     abbr[title]:after {
-        content: " (" attr(title) ")";
+        content: " ("attr(title) ")";
     }
 
     /*
@@ -158,6 +239,7 @@ footer {
     pre {
         white-space: pre-wrap !important;
     }
+
     pre,
     blockquote {
         border: 1px solid #999;
